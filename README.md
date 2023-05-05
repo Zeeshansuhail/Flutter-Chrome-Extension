@@ -29,10 +29,10 @@ Step 2: Change your working directory to the newly created project folder and op
 cd my_chrome_extension
 ```
 
-Step 3: Prepare the Flutter UI ([video tutorial](https://colab.research.google.com/drive/1FSsmOOee0GeFUe6u260bmSWhNpAvfaPO?authuser=2#scrollTo=Gyd-Uifiev4i))
+Step 3: Prepare the Flutter UI ([video tutorial](https://youtu.be/pCDU7k7261c))
 
 
-Step 4: Deploy a Cloud Function ([video tutorial](https://colab.research.google.com/drive/1FSsmOOee0GeFUe6u260bmSWhNpAvfaPO?authuser=2#scrollTo=Gyd-Uifiev4i), [python code](https://colab.research.google.com/drive/1FSsmOOee0GeFUe6u260bmSWhNpAvfaPO?authuser=2#scrollTo=Gyd-Uifiev4i))
+Step 4: Deploy a Cloud Function ([video tutorial](https://youtu.be/pCDU7k7261c), [python code](https://colab.research.google.com/drive/1FSsmOOee0GeFUe6u260bmSWhNpAvfaPO?authuser=2#scrollTo=Gyd-Uifiev4i))
 
 
 Step 4: Build the Chrome extension
