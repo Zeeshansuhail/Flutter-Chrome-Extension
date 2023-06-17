@@ -1,6 +1,5 @@
 import 'dart:js_util';
 
-import 'package:atomsbox/atomsbox.dart';
 import 'package:flutter/material.dart';
 
 import '../chrome_api.dart';
@@ -37,42 +36,42 @@ class _ChromePopupState extends State<ChromePopup> {
               fit: BoxFit.contain,
               height: 32,
             ),
-            AppText.bodySmall(' for Chrome'),
+            const Text(' for Chrome'),
           ],
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(AppConstants.sm),
+        padding: const EdgeInsets.all(8),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
               child: SingleChildScrollView(
                 child: Column(
-                  children: [
-                    AppExpansionTile.gradient(
-                      title: AppText('Summary #1'),
-                      children: [AppText('Placeholder')],
+                  children: const [
+                    ExpansionTile(
+                      title: Text('Summary #1'),
+                      children: [Text('Placeholder')],
                     ),
-                    const SizedBox(height: AppConstants.sm),
-                    AppExpansionTile.gradient(
-                      title: AppText('Summary #2'),
-                      children: [AppText('Placeholder')],
+                    SizedBox(height: 8),
+                    ExpansionTile(
+                      title: Text('Summary #2'),
+                      children: [Text('Placeholder')],
                     ),
-                    const SizedBox(height: AppConstants.sm),
-                    AppExpansionTile.gradient(
-                      title: AppText('Summary #3'),
-                      children: [AppText('Placeholder')],
+                    SizedBox(height: 8),
+                    ExpansionTile(
+                      title: Text('Summary #3'),
+                      children: [Text('Placeholder')],
                     ),
                   ],
                 ),
               ),
             ),
-            const SizedBox(width: AppConstants.sm),
+            const SizedBox(width: 10),
             Expanded(
               child: SingleChildScrollView(
                 child: Container(
-                  margin: const EdgeInsets.only(bottom: AppConstants.xlg * 4),
+                  margin: const EdgeInsets.only(bottom: 8),
                   child: isLoading
                       ? Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -90,25 +89,25 @@ class _ChromePopupState extends State<ChromePopup> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () async {
-          String url = await selectUrl();
+      // floatingActionButton: FloatingActionButton.extended(
+      //   onPressed: () async {
+      //     String url = await selectUrl();
 
-          setState(() {
-            isLoading = true;
-          });
+      //     setState(() {
+      //       isLoading = true;
+      //     });
 
-          String summary = await getSummary(url);
+      //     String summary = await getSummary(url);
 
-          setState(() {
-            _summary = summary;
-            isLoading = false;
-          });
-        },
-        tooltip: 'Increment',
-        icon: const Icon(Icons.add),
-        label: AppText('Summarize'),
-      ),
+      //     setState(() {
+      //       _summary = summary;
+      //       isLoading = false;
+      //     });
+      //   },
+      //   tooltip: 'Increment',
+      //   icon: const Icon(Icons.add),
+      //   label: AppText('Summarize'),
+      // ),
     );
   }
 
